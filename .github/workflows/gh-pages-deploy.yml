@@ -18,3 +18,6 @@ jobs:
           run: git config user.name "jitsejan" && git config user.email "code@jitsejan.com"
         - name: Deploy
           run: npm run deploy
+          env:
+            VUE_APP_SUPABASE_KEY: ${{ secrets.VUE_APP_SUPABASE_KEY }}
+            VUE_APP_SUPABASE_URL: ${{ secrets.VUE_APP_SUPABASE_URL }}

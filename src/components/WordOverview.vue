@@ -1,10 +1,12 @@
 <template>
   <div>
     <h1>Word overview</h1>
-    <ul>
-      <li class="word-entry" v-for="elem in words" :key="elem.id">
-        <h2>{{elem.word}}</h2>
-        {{elem.definition}}
+    <ul class="word-ul">
+      <li class="word-li-entry" v-for="elem in words" :key="elem.id">
+        <h2 class="word-title">{{elem.word}}</h2>
+        <q class="word-definition">
+          {{elem.definition}}
+        </q>
       </li>
     </ul>
   </div>
@@ -19,20 +21,18 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h2 {
+h2.word-title {
   margin: 40px 0 0;
 }
-ul {
+ul.word-ul {
   list-style-type: none;
-  padding: 0;
+  padding: 10;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+li.word-li-entry {
+  margin: 10px;
 }
-a {
-  color: #42b983;
+q.word-definition {
+  font-style: italic;
 }
 </style>

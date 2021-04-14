@@ -15,6 +15,7 @@ export default {
     getWords() {
       WordDataService.getAll()
       .then((res) => {
+        console.log(res);
         this.words = res.body;
       })
       .catch((error) => {

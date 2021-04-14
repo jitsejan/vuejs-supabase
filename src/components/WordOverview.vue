@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1>Word overview</h1>
-    <div class="" v-for="word in words" :key="word.id">
-      <h2>{{word.word}}</h2>
+    <div class="word-entry" v-for="elem in words" :key="elem.id">
+      <h2>{{elem.word}}</h2>
       {{word.definition}}
    </div>
   </div>

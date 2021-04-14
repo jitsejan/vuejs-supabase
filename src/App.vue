@@ -15,14 +15,14 @@ export default {
     getWords() {
       WordDataService.getAll()
       .then((res) => {
-        this.words = res.data;
+        this.words = res.body;
       })
       .catch((error) => {
         console.error(error);
       });
     },
   },
-  async created() {
+  created() {
     this.getWords();
   },
   components: {

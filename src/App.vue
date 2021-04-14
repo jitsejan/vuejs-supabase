@@ -22,7 +22,7 @@ export default {
       });
     },
   },
-  created() {
+  async created() {
     this.getWords();
   },
   components: {

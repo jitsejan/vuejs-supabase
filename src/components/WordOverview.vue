@@ -1,10 +1,12 @@
 <template>
   <div>
     <h1>Word overview</h1>
-    <div class="word-entry" v-for="elem in words" :key="elem.id">
-      <h2>{{elem.word}}</h2>
-      {{word.definition}}
-   </div>
+    <ul>
+      <li class="word-entry" v-for="elem in words" :key="elem.id">
+        <h2>{{elem.word}}</h2>
+        {{elem.definition}}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -19,7 +21,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
+h2 {
   margin: 40px 0 0;
 }
 ul {
